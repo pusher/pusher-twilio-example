@@ -24,7 +24,7 @@ class App < Sinatra::Base
       status 401
     else
       Pusher['calls'].trigger('call_incoming', {
-        :from_number => params['From'],
+        :from_number =>  '...' + params['From'][-4, 4],
         :timestamp => Time.now
       })
     end
@@ -35,7 +35,7 @@ class App < Sinatra::Base
       status 401
     else
       Pusher['sms'].trigger('sms_received', {
-        :from_number => params['From'],
+        :from_number => '...' + params['From'][-4, 4],
         :timestamp => Time.now,
         :text => params['Body']
       })

@@ -2,19 +2,43 @@
 <html lang="en">
   <head>
     <title>Pusher &amp; Twilio Example</title>
+    
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    
   </head>
   <body>
     
-    <h1>Pusher &amp; Twilio Example</h1>
+    <div id="main" class="container">
+      
+      <header class="jumbotron subhead" id="overview">
+        <h1>Pusher &amp; Twilio Example</h1>
+        <p class="lead">A <em>super simple</em> demonstration of integrating <a href="http://pusher.com">Pusher</a> &amp; <a href="http://twilio.com">Twilio</a>.</p>
+      </header>
+      
+      <div class="page-header">
+          <h2>Demo tels:</h2>
+          <ul>
+            <li>US: <small class="phone-number">+1 985-200-2798</small></li>
+            <li>UK: <small class="phone-number">+44 20 3322 2147</small></li>
+          </ul>
+      </div>
+      
+      <div class="row">    
     
-    <div>
-      <h3>SMS</h3>
-      <ul id="sms_messages"></ul>        
-    </div>
+        <div class="span6">
+          <h3>SMS</h3>
+          <ul id="sms_messages"></ul>        
+        </div>
     
-    <div>
-      <h3>Incoming Calls</h3>
-      <ul id="incoming_calls"></ul>
+        <div class="span6">
+          <h3>Incoming Calls</h3>
+          <ul id="incoming_calls"></ul>
+        </div>
+      
+      </div>
+      
     </div>
     
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>

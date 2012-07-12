@@ -1,0 +1,51 @@
+.page-header .phone-number {
+  font-size: 30pt;
+  line-height: 30pt;
+}
+
+#main div.row div.span4 h3 {
+  background-color: white !important;
+}
+
+#main div.row div.span4:nth-child(odd)
+{
+  background-color: #F7F7F9;
+  min-height: 200px;
+}
+
+#main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main ul li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  overflow: auto;
+}
+
+#main ul .detail .label {
+  margin-right: 5px;
+}
+
+#main ul .detail .short-number {
+  font-weight: bold;
+}
+
+#main ul .details {
+  float: left;
+}
+
+#sms_messages .message {
+  clear: both;
+  padding-top: 5px;
+}
+
+#incoming_calls li .actions {
+  float: right;
+}
+
+#incoming_calls li .actions a {
+  margin: 5px;
+}
