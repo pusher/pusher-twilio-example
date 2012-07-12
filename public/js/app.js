@@ -12,6 +12,8 @@
   
     activeCallChannel = pusher.subscribe('calls');
     activeCallChannel.bind( 'call_incoming', callIncoming );
+    
+    setInterval(updateTimestamps, 10 * 1000);
   }
   
   // SMS
@@ -61,7 +63,9 @@
       '</div>' +
       '<div class="detail">' +               
         '<span class="label">Received:</span>' +
-        '<span class="timestamp">' + getTimeDescription(data.timestamp) + '</span>' +
+        '<span class="timestamp" data-timestamp="' + data.timestamp + '">' + 
+          getTimeDescription(data.timestamp) +
+        '</span>' +
       '</div>' +
     '</div>';
     return html;
@@ -95,6 +99,15 @@
       desc = time.getDay() + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"][time.getMonth()]
     }
     return desc;
+  }
+  
+  function updateTimestamps() {
+    $( '.timestamp' ).each( function( i, el ) {
+      el = $( el );
+      var time = el.attr('data-timestamp');
+      var desc = getTimeDescription( time );
+      el.text( desc );
+    } );
   }
 
   $(init);
