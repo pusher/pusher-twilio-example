@@ -1,0 +1,6 @@
+pusher:
+  app_id: <YOUR_APP_ID>
+  app_key: <YOUR_APP_KEY>
+  app_secret: <YOUR_APP_SECRET>
+twilio:
+  account_sid: <YOUR_TWILIO_ACCOUNT_SID>
