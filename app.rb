@@ -25,7 +25,7 @@ class App < Sinatra::Base
     else
       Pusher['calls'].trigger('call_incoming', {
         :from_number =>  '...' + params['From'][-4, 4],
-        :timestamp => Time.now
+        :timestamp => Time.now.strftime("%Y-%m-%dT%H:%M:%S")  
       })
     end
   end
@@ -36,7 +36,7 @@ class App < Sinatra::Base
     else
       Pusher['sms'].trigger('sms_received', {
         :from_number => '...' + params['From'][-4, 4],
-        :timestamp => Time.now,
+        :timestamp => Time.now.strftime("%Y-%m-%dT%H:%M:%S"),
         :text => params['Body']
       })
     end
