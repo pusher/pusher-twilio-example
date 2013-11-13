@@ -15,9 +15,11 @@ Blog post describing this project can be found here: https://www.twilio.com/blog
 7. Save your Twilio settings
 8. You are good to go... 
 
-### For Bonus Points
+#### For Bonus Points
 restyle your web template to look awesome. "index.erb" 
 
+
+### How to run locally
 * `bundle install`
 * `ruby app.rb`
 
