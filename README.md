@@ -21,6 +21,7 @@ restyle your web template to look awesome. "index.erb"
 
 ### How to run locally
 * `bundle install`
+* `cp config.example.yml config.yml`
 * `ruby app.rb`
 
 Open your web browser at *http://localhost:4566*.
